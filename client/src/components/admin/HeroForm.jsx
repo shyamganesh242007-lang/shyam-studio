@@ -604,15 +604,17 @@ function HeroForm() {
       {/* CROP MODAL */}
       {showCropModal && (
         <ImageCropModal
-          image={selectedImage}
-          crop={crop}
-          zoom={zoom}
-          setCrop={setCrop}
-          setZoom={setZoom}
-          onCropComplete={onCropComplete}
-          onCancel={handleCropCancel}
-          onSave={handleCropSave}
-        />
+  image={selectedImage}
+  crop={crop}
+  zoom={zoom}
+  setCrop={setCrop}
+  setZoom={setZoom}
+  onCropComplete={onCropComplete}
+  onCancel={handleCropCancel}
+  onSave={handleCropSave}
+  aspect={1}
+  title="Crop Hero Image"
+/>
       )}
     </>
   );
