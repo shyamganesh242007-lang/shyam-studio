@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Login from "./pages/Login";
+import ResetPassword from "./pages/ResetPassword";
+
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminDashboard from "./pages/AdminDashboard";
 import HeroAdmin from "./pages/HeroAdmin";
@@ -14,8 +17,12 @@ function App() {
     <BrowserRouter basename="/shyam-studio">
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/projects" element={<Projects />} />
+
+        {/* Authentication */}
         <Route path="/login" element={<Login />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
 
         {/* Protected Admin Section */}
         <Route path="/admin" element={<AdminLayout />}>
